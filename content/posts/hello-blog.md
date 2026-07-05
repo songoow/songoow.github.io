@@ -1,5 +1,6 @@
 ---
 title: "第一篇文章：博客是怎么搭起来的"
+slug: "hello-blog"
 date: 2026-10-06T09:00:00+08:00
 draft: false
 tags: ["博客", "Hugo"]
