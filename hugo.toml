@@ -1,0 +1,95 @@
+baseURL = "https://songoow.github.io/"
+title = "song 的博客"
+theme = "PaperMod"
+
+defaultContentLanguage = "zh-cn"
+locale = "zh-cn"
+languageName = "简体中文"
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pygmentsUseClasses = true
+
+[services]
+  [services.googleAnalytics]
+    id = ""
+
+# ── PaperMod 参数 ──────────────────────────────
+[params]
+  env = "production"
+  description = "song 的个人博客：技术、工程与学习记录"
+  author = "song"
+
+  defaultTheme = "auto"        # 跟随系统明暗
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  ShowToc = true
+  TocOpen = false
+
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "你好，我是 song 👋"
+    Content = "这里记录我的技术实践、工程思考与学习笔记。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/songoow"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
+
+# ── 顶部菜单 ──────────────────────────────────
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 40
+
+# ── 搜索需要 JSON 输出 ────────────────────────
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ── 永久链接 ──────────────────────────────────
+[permalinks]
+  posts = "/posts/:year/:month/:slug/"
+
+# ── 代码高亮 ──────────────────────────────────
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
